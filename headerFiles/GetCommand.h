@@ -8,7 +8,7 @@ class GetCommand :	public CommandIface
 {
 public:
 	GetCommand();
-private:
+protected:
 	std::string m_key;
 	Result ReadArguments(const std::string& arguments)  final;
 	Result DoExecute() const final;

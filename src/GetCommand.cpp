@@ -17,7 +17,13 @@ GetCommand::GetCommand()
  */
 Result GetCommand::ReadArguments(const string& arguments)
 {
-
+	Result result;
+    if(arguments.empty())
+    {
+    	result.status=false;
+    	result.result += "Error: argument can not be empty \n";
+    	return result;
+    }
 	size_t pos = 0;
 	size_t nextpos = 0;
 	vector<string> words;
@@ -28,7 +34,7 @@ Result GetCommand::ReadArguments(const string& arguments)
 		pos = nextpos + 1;
 	} while (nextpos != std::string::npos);
 
-	Result result;
+
 	if (words.size() != 1)
 	{
 		result.status = false;

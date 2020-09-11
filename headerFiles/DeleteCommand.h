@@ -8,7 +8,7 @@ class DeleteCommand :	public CommandIface
 public:
 	DeleteCommand();
 
-private:
+protected:
 	std::string m_key;
     Result ReadArguments(const std::string& arguments)  final;
 	Result DoExecute() const final;

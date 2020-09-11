@@ -15,7 +15,7 @@ public:
 
 protected:
 	CommandType m_type;
-	DataBaseManagerIface* databaseManager;
+	DataBaseManagerIface* databaseManager=nullptr;
 	virtual Result ReadArguments(const std::string& arguments)  = 0 ;
 	virtual Result DoExecute() const = 0;
 };

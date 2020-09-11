@@ -5,7 +5,7 @@
 
 
 
-const std::string settingsFile = "mysettings.txt";
+const std::string settingsFile = "settingsFile!DoNotDelete";
 const std::string commandSuccesful = "OK";
 const std::string helpMessage = "These are the available commands:\nSET key value\nGET key\nDELETE key";
 const std::string proposeHelpMessage = "Type help to get the available commands.\n";

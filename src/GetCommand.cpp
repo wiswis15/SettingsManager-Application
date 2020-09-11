@@ -1,5 +1,6 @@
 #include "GetCommand.h"
 #include <vector>
+#include <sstream>
 
 
 using namespace std;
@@ -33,6 +34,16 @@ Result GetCommand::ReadArguments(const string& arguments)
 		result.status = false;
 		result.result += "Error: number of argument is not correct \n";
 		result.result += "Type help to get the available commands. \n";
+		return result;
+	}
+
+	// Check the number of characters
+	if (words.front().size() > max_CharKeysValue)
+	{
+		result.status = false;
+		std::stringstream  errorMesage;
+		errorMesage << "Error: Two long key :Max Key characters= " << max_CharKeys<<"\n";
+		result.result+=errorMesage.str();
 		return result;
 	}
 

@@ -60,6 +60,13 @@ Result FileDataBaseManager::GetSetting(const string& key)
 Result FileDataBaseManager::SetSetting(const string& key, const string& value)
 {
 	Result result;
+	if(key.empty())
+	{
+		result.status=false;
+		result.result="Error, key can not be empty!\n";
+		return result;
+	}
+
 	try
 	{
 		if (m_settings.find(key) != m_settings.end())

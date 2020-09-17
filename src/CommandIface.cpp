@@ -10,12 +10,12 @@ using namespace std;
  */
 Result CommandIface::Execute(const string& arguments) 
 {
-	auto result=ReadArguments(arguments);
+	auto result=ReadArguments(arguments);// first read the command's arguments
 	if (!result.status)
 	{	// Error in input arguments
 		return result;
 	}
-	return DoExecute();
+	return DoExecute();// execute it
 }
 
 

@@ -16,7 +16,7 @@ public:
 protected:
 	CommandType m_type;
 	DataBaseManagerIface* databaseManager=nullptr;
-	virtual Result ReadArguments(const std::string& arguments)  = 0 ;
-	virtual Result DoExecute() const = 0;
+	virtual Result ReadArguments(const std::string& arguments)  = 0 ;// Any concrete class must implement its function to check and read arguments
+	virtual Result DoExecute() const = 0;// Any concrete class must implement the execution logic
 };
 

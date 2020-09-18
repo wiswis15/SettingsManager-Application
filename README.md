@@ -1,9 +1,9 @@
 # SettingsManager-Application
 
-SettingsManager-Application is an application that provides the user with an easy way to save,retrieve and delete settings/information on their computer.
-Example:
-SET myBanKAccount mybankAcoountNumber    : myBanKAccount is saved
-GET myBanKAccount : will display mybankAcoountNumber
+SettingsManager-Application is an application that provides the user with an easy way to save,retrieve and delete settings/information on their computer.  
+Example:  
+SET myBanKAccount mybankAcoountNumber    : myBanKAccount is saved  
+GET myBanKAccount : will display mybankAcoountNumber  
 
 The information is saved into a file, at the same level of the execution binary,Eventually, you can personalize the path by changing  the value of the variable settingsFile inside Definition.h
 
